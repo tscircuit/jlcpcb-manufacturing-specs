@@ -1,5 +1,5 @@
 {
-  "name": "jlcpcb-manufacturing-specs",
+  "name": "@tscircuit/jlcpcb-manufacturing-specs",
   "module": "lib/index.ts",
   "type": "module",
   "private": true,
