@@ -1,0 +1,20 @@
+{
+  "name": "jlcpcb-manufacturing-specs",
+  "module": "lib/index.ts",
+  "type": "module",
+  "private": true,
+  "files": ["lib"],
+  "scripts": {
+    "typecheck": "bunx tsc --noEmit",
+    "format": "biome check --write .",
+    "format:check": "biome check ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
+    "@types/bun": "latest",
+    "circuit-json": "^0.0.417"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
