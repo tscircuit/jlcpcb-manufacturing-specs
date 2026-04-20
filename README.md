@@ -1,0 +1,1 @@
+# jlcpcb-manufacturing-specs
