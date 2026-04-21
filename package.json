@@ -1,19 +1,9 @@
 {
   "name": "@tscircuit/jlcpcb-manufacturing-specs",
   "version": "0.0.1",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
+  "main": "./index.ts",
   "type": "module",
-  "files": ["dist"],
   "scripts": {
-    "build": "tsup lib/index.ts --format esm --dts --clean",
-    "prepare": "bun run build",
     "typecheck": "tsc --noEmit",
     "format": "biome check --write .",
     "format:check": "biome check ."
@@ -22,7 +12,6 @@
     "@biomejs/biome": "^2.4.12",
     "@types/bun": "latest",
     "circuit-json": "^0.0.417",
-    "tsup": "^8.5.0",
     "typescript": "^5.9.3"
   }
 }
