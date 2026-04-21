@@ -7,8 +7,8 @@ export const jlcMinTolerances: JlcToleranceMap = {
   min_via_to_via_spacing: 0.1,
   min_trace_to_pad_spacing: 0.1,
   min_pad_to_pad_spacing: 0.1,
-  min_via_hole_diameter: 0.3,
-  min_via_pad_diameter: 0.2,
+  min_via_hole_diameter: 0.2,
+  min_via_pad_diameter: 0.3,
 }
 
 // TODO: Update these values
