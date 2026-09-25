@@ -20,7 +20,6 @@ export const jlcPreferredTolerances: JlcToleranceMap = {
   min_trace_width: 0.2,
   min_via_hole_edge_to_via_hole_edge_clearance: 0.2,
   min_plated_hole_drill_edge_to_drill_edge_clearance: 0.2,
-  // JLCPCB PCB capabilities: NPTH to Track, measured edge-to-edge.
   min_trace_to_hole_edge_clearance: 0.2,
   min_trace_to_pad_edge_clearance: 0.2,
   min_pad_edge_to_pad_edge_clearance: 0.2,
