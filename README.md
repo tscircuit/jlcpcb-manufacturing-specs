@@ -22,6 +22,11 @@ bun add github:tscircuit/jlcpcb-manufacturing-specs
 - `jlcPreferredTolerances`: more conservative preferred tolerances
 - `JlcToleranceMap`: partial map of `PcbBoard` tolerance keys to numeric values
 
+Both maps specify `min_trace_to_hole_edge_clearance: 0.2` (millimeters),
+following the **NPTH to Track** row in [JLCPCB’s capability table](https://jlcpcb.com/capabilities/pcb-capabilities).
+This is the gap from the trace copper edge to the non-plated hole edge.
+The preferred map currently uses the same published minimum for this rule.
+
 ## Usage
 
 ```ts
