@@ -238,6 +238,7 @@ export function estimateJlcpcbQuote(
     throw new Error("Discount exceeds order total")
   return {
     type: "pcb_quote_estimate" as const,
+    pcb_quote_estimate_id: `pcb_quote_estimate_${input.quote_request_hash}_${evidence.pricing_model_version}`,
     quote_request_hash: input.quote_request_hash,
     pcb_board_id: input.pcb_board_id,
     supplier_name: "jlcpcb",

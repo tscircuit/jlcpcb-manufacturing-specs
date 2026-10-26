@@ -1,14 +1,22 @@
 import { expect, test } from "bun:test"
-const observations = [
-  {case_id: "small_drill_small_pad", hole_diameter_mm: 0.15, outer_diameter_mm: 0.3},
-  {case_id: "small_drill_large_pad", hole_diameter_mm: 0.2, outer_diameter_mm: 0.45},
-  {case_id: "small_drill_standard_pad", hole_diameter_mm: 0.2, outer_diameter_mm: 0.4},
-].filter(sample => sample.case_id !== "small_drill_large_pad")
 import {
   estimateJlcpcbQuote,
   getJlcpcbPrecisionViaIds,
 } from "../../lib/quote/estimate-jlcpcb-quote"
 import { evidence, input, now } from "./fixture"
+
+const observations = [
+  {
+    case_id: "small_drill_small_pad",
+    hole_diameter_mm: 0.15,
+    outer_diameter_mm: 0.3,
+  },
+  {
+    case_id: "small_drill_standard_pad",
+    hole_diameter_mm: 0.2,
+    outer_diameter_mm: 0.4,
+  },
+]
 
 test("documented small-via cases require fees unless included, without double counting", () => {
   for (const sample of observations) {
