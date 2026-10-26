@@ -1,3 +1,5 @@
+import type { PcbQuoteEstimate } from "circuit-json"
+
 /** All amounts are order totals in currency major units. undefined is unknown. */
 export const manufacturingCostKeys = [
   "pcb_fabrication_cost",
@@ -124,7 +126,7 @@ export function estimateJlcpcbQuote(
   input: QuoteInput,
   evidence: QuoteEvidence,
   now = new Date(),
-) {
+): PcbQuoteEstimate {
   if (input.material !== "fr4") throw new Error("Only rigid FR4 is supported")
   if (!/^[a-f0-9]{64}$/.test(input.quote_request_hash))
     throw new Error("Invalid quote request hash")

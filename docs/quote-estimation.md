@@ -3,8 +3,8 @@
 The initial implementation supports USD quotes only (two-decimal monetary rounding).
 Other currencies must be converted by a separately dated FX layer or rejected.
 
-The initial implementation composes dated supplier evidence into the proposed
-`pcb_quote_estimate` format. It is **not yet a calibrated price predictor** and
+The initial implementation composes dated supplier evidence into the published
+`PcbQuoteEstimate` / `pcb_quote_estimate` format from `circuit-json@0.0.536`. It is **not yet a calibrated price predictor** and
 no 5% accuracy claim is made. There is no guessed fabrication formula or global
 Kelvin fee. The exact PCB revision and all manufacturing options must match the
 supplier quote; country alone does not establish duty or shipping cost.
@@ -48,11 +48,12 @@ invoice and every supplement/refund. Assign all quantities/variants of one board
 revision to one split. Hold out boards before tuning; do not fit on validation
 invoice totals. Report counts and worst per-board error, not only average error.
 
-The current public PR contains the validation machinery and synthetic boundary tests.
-No final-invoice corpus or pre-order prediction results have been published.
-Private order-history and email-derived datasets require explicit export approval.
-The next integration is a live supplier-quote adapter and a normalized, approved
-final-invoice corpus; the legacy registry quote pipeline was removed.
+The approved real order and surcharge observations are in `datasets/jlcpcb/`,
+with accounting reconciliation and unresolved details documented in its README.
+They are not yet final-invoice benchmark labels: exact revisions and final costs
+still need reconciliation. No pre-order prediction results have been published.
+The next integration is a live supplier-quote adapter and a final-invoice
+validation corpus; the legacy registry quote pipeline was removed.
 
 Use `customs_duties_and_taxes_cost` when the supplier only provides a combined
 import amount. Alternatively use both `duties_cost` and `import_tax_cost`; never

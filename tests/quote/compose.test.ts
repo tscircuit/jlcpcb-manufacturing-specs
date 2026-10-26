@@ -1,4 +1,5 @@
 import { expect, test } from "bun:test"
+import { pcb_quote_estimate } from "circuit-json"
 import { estimateJlcpcbQuote } from "../../lib/quote/estimate-jlcpcb-quote"
 import { evidence, input, now } from "./fixture"
 
@@ -8,6 +9,7 @@ test("quotes separate manufacturing and delivery, applying discounts exactly onc
     { ...evidence, discount_cost: 1 },
     now,
   )
+  expect(pcb_quote_estimate.parse(quote)).toEqual(quote)
   expect(quote.manufacturing_cost).toBe(28)
   expect(quote.shipping_cost).toBe(12)
   expect(quote.duties_cost).toBe(4)
