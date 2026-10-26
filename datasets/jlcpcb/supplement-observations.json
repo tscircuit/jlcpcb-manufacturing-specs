@@ -1,0 +1,54 @@
+[
+  {
+    "case_id": "small-via-20260826",
+    "order_suffix": "Y34",
+    "observed_at": "2026-08-26",
+    "hole_diameter_mm": 0.2,
+    "outer_diameter_mm": 0.3,
+    "requested_supplement_amount": 67.98,
+    "currency": null,
+    "contains_kelvin_test": true,
+    "mentions_shipping": true,
+    "mentions_duty_or_vat": true,
+    "is_final_invoice": false
+  },
+  {
+    "case_id": "small-via-20260906",
+    "order_suffix": "Y43",
+    "observed_at": "2026-09-06",
+    "hole_diameter_mm": 0.15,
+    "outer_diameter_mm": 0.3,
+    "requested_supplement_amount": 73.15,
+    "currency": null,
+    "contains_kelvin_test": true,
+    "mentions_shipping": false,
+    "mentions_duty_or_vat": true,
+    "is_final_invoice": false
+  },
+  {
+    "case_id": "small-via-20260907-a",
+    "order_suffix": "Y42",
+    "observed_at": "2026-09-07",
+    "hole_diameter_mm": 0.2,
+    "outer_diameter_mm": 0.4,
+    "requested_supplement_amount": 67.91,
+    "currency": null,
+    "contains_kelvin_test": true,
+    "mentions_shipping": false,
+    "mentions_duty_or_vat": true,
+    "is_final_invoice": false
+  },
+  {
+    "case_id": "small-via-20260907-b",
+    "order_suffix": "Y45",
+    "observed_at": "2026-09-07",
+    "hole_diameter_mm": 0.15,
+    "outer_diameter_mm": 0.3,
+    "requested_supplement_amount": 54.18,
+    "currency": null,
+    "contains_kelvin_test": true,
+    "mentions_shipping": false,
+    "mentions_duty_or_vat": false,
+    "is_final_invoice": false
+  }
+]
