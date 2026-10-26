@@ -3,10 +3,8 @@
 Seed corpus for evaluating PCB quote predictions against real manufacturing orders.
 These records are observations, not yet a final-invoice validation dataset.
 
-| File | Records | Source |
-| --- | ---: | --- |
-| `shipped-order-observations.json` | 2 | Shipped-order details and assembly price tooltips |
-| `supplement-observations.json` | 4 | Additional-charge email notices |
+- `shipped-order-observations.json`: two shipped-order records from order details and assembly price tooltips.
+- `supplement-observations.json`: four additional-charge email notices.
 
 The normalized specifications and costs were approved for public publication by
 the account owner. Customer/account identifiers, names, email recipients, addresses,
