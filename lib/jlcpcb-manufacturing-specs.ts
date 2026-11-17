@@ -10,8 +10,8 @@ export const jlcMinTolerances: JlcToleranceMap = {
   min_trace_to_pad_edge_clearance: 0.1,
   min_pad_edge_to_pad_edge_clearance: 0.1,
   min_board_edge_clearance: 0.2,
-  min_via_hole_diameter: 0.2,
-  min_via_pad_diameter: 0.3,
+  min_via_hole_diameter: 0.3,
+  min_via_pad_diameter: 0.45,
 }
 
 // TODO: Update these values
@@ -19,7 +19,6 @@ export const jlcPreferredTolerances: JlcToleranceMap = {
   min_trace_width: 0.2,
   min_via_hole_edge_to_via_hole_edge_clearance: 0.2,
   min_plated_hole_drill_edge_to_drill_edge_clearance: 0.2,
-  min_trace_to_hole_edge_clearance: 0.2,
   min_trace_to_pad_edge_clearance: 0.2,
   min_pad_edge_to_pad_edge_clearance: 0.2,
   min_board_edge_clearance: 0.2,
