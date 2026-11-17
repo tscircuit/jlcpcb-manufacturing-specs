@@ -7,8 +7,13 @@ export interface JlcStackup {
   num_layers: number
   thickness: number
   material: "fr4"
+  /** Copper thickness of plated hole and via barrel walls in mm. */
+  plated_hole_copper_thickness: number
   layers: PcbStackupLayer[]
 }
+
+/** JLCPCB's average hole plating thickness is 18 µm (Drilling): https://jlcpcb.com/capabilities/pcb-capabilities */
+const JLC_PLATED_HOLE_COPPER_THICKNESS = 0.018
 
 const prepregRelativePermittivity = {
   "106 RC72%": 3.92,
@@ -83,5 +88,12 @@ export function createJlcStackup({
     if (dielectric) layers.push(...[dielectric].flat())
   }
 
-  return { name, num_layers, thickness, material: "fr4", layers }
+  return {
+    name,
+    num_layers,
+    thickness,
+    material: "fr4",
+    plated_hole_copper_thickness: JLC_PLATED_HOLE_COPPER_THICKNESS,
+    layers,
+  }
 }
