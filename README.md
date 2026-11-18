@@ -21,6 +21,7 @@ bun add github:tscircuit/jlcpcb-manufacturing-specs
 - `jlcMinTolerances`: minimum manufacturing tolerances
 - `jlcPreferredTolerances`: more conservative preferred tolerances
 - `JlcToleranceMap`: partial map of `PcbBoard` tolerance keys to numeric values
+- `jlcPanelRules`: panelization rules (mouse bites, breakaway tabs, board spacing, tooling edges)
 
 ## Usage
 
